@@ -1,0 +1,224 @@
+/* ============================================================
+   BrowserStack AI SDK Docs — Custom Styles
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   Brand colour
+   ---------------------------------------------------------- */
+:root {
+  --md-primary-fg-color:        #0070F0;
+  --md-primary-fg-color--light: #5BA4F8;
+  --md-primary-fg-color--dark:  #0057C2;
+  --md-accent-fg-color:         #0070F0;
+  --bs-blue:                    #0070F0;
+  --bs-blue-light:              #E8F1FD;
+}
+
+/* ----------------------------------------------------------
+   Page headings — clear visual hierarchy
+   ---------------------------------------------------------- */
+
+/* H1 — page title */
+.md-typeset h1 {
+  font-size:      2rem;
+  font-weight:    700;
+  letter-spacing: -0.01em;
+  color:          var(--md-default-fg-color);
+  border-bottom:  3px solid var(--bs-blue);
+  padding-bottom: 0.35em;
+  margin-bottom:  1.2em;
+}
+
+/* H2 — major sections */
+.md-typeset h2 {
+  font-size:      1.45rem;
+  font-weight:    600;
+  color:          var(--md-default-fg-color);
+  border-left:    4px solid var(--bs-blue);
+  padding-left:   0.65em;
+  margin-top:     2.2em;
+  margin-bottom:  0.75em;
+}
+
+/* H3 — sub-sections (function groups, framework names, etc.) */
+.md-typeset h3 {
+  font-size:      1.15rem;
+  font-weight:    600;
+  color:          var(--md-default-fg-color);
+  border-left:    3px solid var(--md-primary-fg-color--light);
+  padding-left:   0.55em;
+  margin-top:     1.6em;
+  margin-bottom:  0.5em;
+}
+
+/* H4 — mkdocstrings renders method names at h4 (heading_level:2 + member level) */
+.md-typeset h4 {
+  font-size:      1.05rem;
+  font-weight:    600;
+  color:          var(--md-default-fg-color);
+  margin-top:     1.4em;
+  margin-bottom:  0.35em;
+  padding-bottom: 0.2em;
+  border-bottom:  1px solid rgba(0, 112, 240, 0.18);
+}
+
+/* H5, H6 */
+.md-typeset h5,
+.md-typeset h6 {
+  font-size:    0.95rem;
+  font-weight:  600;
+  margin-top:   1em;
+}
+
+/* ----------------------------------------------------------
+   mkdocstrings — function/class/method headings
+   ---------------------------------------------------------- */
+
+/* The doc-heading wraps the signature + label */
+.md-typeset .doc-heading {
+  background:    var(--bs-blue-light);
+  border-left:   4px solid var(--bs-blue);
+  border-radius: 0 6px 6px 0;
+  padding:       0.4em 0.8em;
+  margin-top:    1.8em;
+  margin-bottom: 0.6em;
+}
+
+/* Dark mode adjustment */
+[data-md-color-scheme="slate"] .md-typeset .doc-heading {
+  background: rgba(0, 112, 240, 0.12);
+}
+
+/* The "function" / "method" / "class" label badge */
+.md-typeset .doc-label {
+  background:    var(--bs-blue);
+  color:         #fff;
+  border-radius: 4px;
+  font-size:     0.72rem;
+  font-weight:   600;
+  padding:       0.1em 0.45em;
+  vertical-align: middle;
+  margin-right:  0.4em;
+  letter-spacing: 0.02em;
+}
+
+/* ----------------------------------------------------------
+   Tables — clean bordered layout
+   ---------------------------------------------------------- */
+
+.md-typeset table:not([class]) {
+  width:          100%;
+  border-collapse: collapse;
+  border:         1px solid #d0dce8;
+  border-radius:  6px;
+  overflow:       hidden;       /* clip corners */
+  font-size:      0.85rem;
+  box-shadow:     0 1px 4px rgba(0, 0, 0, 0.07);
+  margin:         1.2em 0;
+  display:        table;        /* override Material's scroll wrapper */
+}
+
+/* Header row */
+.md-typeset table:not([class]) thead tr {
+  background:  var(--bs-blue);
+  color:       #fff;
+}
+
+.md-typeset table:not([class]) thead th {
+  padding:        0.6em 0.85em;
+  font-weight:    600;
+  font-size:      0.82rem;
+  letter-spacing: 0.03em;
+  border:         none;
+  text-align:     left;
+  white-space:    nowrap;
+}
+
+/* Body cells */
+.md-typeset table:not([class]) tbody td {
+  padding:       0.55em 0.85em;
+  border-top:    1px solid #e2eaf3;
+  border-right:  1px solid #e2eaf3;
+  vertical-align: top;
+  line-height:   1.5;
+}
+
+.md-typeset table:not([class]) tbody td:last-child {
+  border-right: none;
+}
+
+/* Zebra striping */
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background: #f5f8fc;
+}
+
+/* Hover highlight */
+.md-typeset table:not([class]) tbody tr:hover {
+  background: #eaf2ff;
+}
+
+/* Dark mode table */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow:   none;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) thead tr {
+  background: rgba(0, 112, 240, 0.7);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody td {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:hover {
+  background: rgba(0, 112, 240, 0.12);
+}
+
+/* Inline code inside table cells */
+.md-typeset table:not([class]) td code,
+.md-typeset table:not([class]) th code {
+  font-size:     0.82em;
+  padding:       0.1em 0.3em;
+  border-radius: 3px;
+  background:    rgba(0, 112, 240, 0.08);
+}
+
+/* ----------------------------------------------------------
+   Section separators / horizontal rules
+   ---------------------------------------------------------- */
+.md-typeset hr {
+  border:       none;
+  border-top:   2px solid #e2eaf3;
+  margin:       2em 0;
+}
+
+[data-md-color-scheme="slate"] .md-typeset hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ----------------------------------------------------------
+   Code blocks — slightly more padding
+   ---------------------------------------------------------- */
+.md-typeset pre > code {
+  padding: 0.9em 1.1em;
+}
+
+/* ----------------------------------------------------------
+   Admonitions — tighten up
+   ---------------------------------------------------------- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 6px;
+}
+
+/* ----------------------------------------------------------
+   Hide Material for MkDocs generator attribution footer
+   ---------------------------------------------------------- */
+.md-footer-meta__inner.md-grid > .md-footer-copyright {
+  display: none;
+}

@@ -1,0 +1,3442 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for BrowserStack AI SDK Python Client">
+      
+      
+        <meta name="author" content="BrowserStack">
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../prompts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Tracing - BrowserStack Python SDK Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tracing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BrowserStack Python SDK Documentation" class="md-header__button md-logo" aria-label="BrowserStack Python SDK Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BrowserStack Python SDK Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tracing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/browserstack/testops" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BrowserStack Python SDK Documentation" class="md-nav__button md-logo" aria-label="BrowserStack Python SDK Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BrowserStack Python SDK Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/browserstack/testops" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tracing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manual-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Tracing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK.trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK.start_span" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        start_span
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK.start_generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        start_generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK.start_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        start_event
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flush" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        flush()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracewrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TraceWrapper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper.trace_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trace_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper.id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        id
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Tracing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.init" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        init
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.with_trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        with_trace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.set_attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.get_trace_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_trace_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.get_carrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_carrier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.inject_remote_carrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        inject_remote_carrier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Media Attachments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Media Attachments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-media-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Media Object
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Media Object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-a-local-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From a local file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-raw-bytes-must-supply-content_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From raw bytes (must supply content_type)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-a-base64-data-uri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From a base64 data URI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaching-media-to-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attaching Media to Traces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attaching Media to Traces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-tracing-aisdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual tracing (AISDK)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-tracing-observe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto tracing (Observe)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-content-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Content Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traceattribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TraceAttribute
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute.SESSION_ID" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SESSION_ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute.USER_ID" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USER_ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute.INPUT" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INPUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute.OUTPUT" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataset_runs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset Runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experiments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiment_runs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experiment Runs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluator_lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluator Lists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evaluation_execution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation Execution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Types Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manual-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Tracing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK.trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK.start_span" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        start_span
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK.start_generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        start_generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.client.AISDK.start_event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        start_event
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flush" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        flush()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracewrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TraceWrapper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper.trace_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        trace_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper.id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        id
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Tracing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.init" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        init
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.with_trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        with_trace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.set_attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        set_attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.get_trace_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_trace_id
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.get_carrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        get_carrier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.Observe.inject_remote_carrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        inject_remote_carrier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media-attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Media Attachments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Media Attachments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-media-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Media Object
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Media Object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-a-local-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From a local file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-raw-bytes-must-supply-content_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From raw bytes (must supply content_type)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-a-base64-data-uri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From a base64 data URI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attaching-media-to-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attaching Media to Traces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attaching Media to Traces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-tracing-aisdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual tracing (AISDK)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-tracing-observe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto tracing (Observe)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-content-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Content Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traceattribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TraceAttribute
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute.SESSION_ID" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SESSION_ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute.USER_ID" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USER_ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute.INPUT" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INPUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browserstack_ai_sdk.attributes.TraceAttribute.OUTPUT" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OUTPUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tracing">Tracing<a class="headerlink" href="#tracing" title="Permanent link">&para;</a></h1>
+<p>Instrument your LLM application with traces, spans, generation observations,
+and media attachments. Two approaches are available:</p>
+<ul>
+<li><strong>Manual tracing</strong> — fine-grained control via <code>AISDK</code> instance methods.</li>
+<li><strong>Auto tracing</strong> — zero-code instrumentation via the <code>Observe</code> class.</li>
+</ul>
+<hr />
+<h2 id="manual-tracing">Manual Tracing<a class="headerlink" href="#manual-tracing" title="Permanent link">&para;</a></h2>
+<p>Fine-grained control over tracing. Use <code>sdk.trace()</code> to create a root trace, then call <code>span()</code>, <code>generate()</code>, or <code>event()</code> to add observations.</p>
+<ul>
+<li><strong>trace(name)</strong> — Create a root trace (end-to-end operation). Returns a <code>TraceWrapper</code>.</li>
+<li><strong>start_span(name)</strong> — Create a span (operation with duration). Nest under a trace or parent span.</li>
+<li><strong>start_generation(name)</strong> — Create a generation observation for LLM calls. Maps <code>prompt</code> and <code>response</code> to span inputs/outputs.</li>
+<li><strong>start_event(name)</strong> — Create an event (point-in-time marker, no duration). Use for cache hits, errors, or tool calls.</li>
+</ul>
+<p>All support <code>expected_output</code> (ground-truth for evaluation) and <code>context</code> (metadata). Call <code>sdk.flush()</code> before shutdown to upload all spans.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+    <div class="doc doc-contents first">
+
+
+        <p>Main client for the BrowserStack AI SDK.</p>
+<p><code>AISDK</code> extends Langfuse to add BrowserStack-specific tracing,
+evaluation, dataset management, experiment tracking, and prompt
+management capabilities.  It configures OpenTelemetry trace export to
+the BrowserStack Evals ingestion endpoint and exposes lazy-loaded
+sub-clients for every product area.</p>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from browserstack_ai_sdk import AISDK
+
+sdk = AISDK(
+    public_key=&quot;your-public-key&quot;,
+    secret_key=&quot;your-secret-key&quot;,
+)
+span = sdk.start_span(&quot;my-step&quot;, input=&quot;hello&quot;)
+span.end(output=&quot;world&quot;)
+sdk.flush()
+</code></pre>
+</details>
+
+<details class="note" open>
+  <summary>Note</summary>
+  <p><code>TestOps</code> is an alias for <code>AISDK</code> provided for backward
+compatibility.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<h2 id="browserstack_ai_sdk.client.AISDK-functions">Functions<a href="#browserstack_ai_sdk.client.AISDK-functions" class="headerlink" title="Permanent link">&para;</a></h2>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.client.AISDK.trace" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">trace</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#browserstack_ai_sdk.client.AISDK.trace" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create a root trace and return a wrapper for attaching child spans.</p>
+<p>A trace represents a single end-to-end request or operation.  Use the
+returned :class:<code>TraceWrapper</code> to call <code>span()</code> and <code>generate()</code>
+for nested child observations.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Human-readable name for the trace.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>**kwargs</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional keyword arguments forwarded to the underlying
+Langfuse trace (e.g. <code>input</code>, <code>output</code>, <code>metadata</code>,
+<code>user_id</code>, <code>session_id</code>).</p>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A <code>TraceWrapper</code> object exposing <code>span()</code> and <code>generate()</code> helpers for child observations.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">sdk = AISDK(public_key=&quot;pk&quot;, secret_key=&quot;sk&quot;)
+t = sdk.trace(&quot;rag-pipeline&quot;, input={&quot;query&quot;: &quot;What is AI?&quot;})
+
+# Span for retrieval
+retrieval = t.span(&quot;retrieval&quot;)
+retrieval.end(output={&quot;docs&quot;: [&quot;AI is...&quot;]})
+
+# Generation for LLM call
+gen = t.span(&quot;generation&quot;, input=&quot;docs + question&quot;)
+gen.end(output=&quot;generated answer&quot;)
+
+sdk.flush()
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.client.AISDK.start_span" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">start_span</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">expected_output</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent_span</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#browserstack_ai_sdk.client.AISDK.start_span" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create a span observation, optionally nested under a parent span.</p>
+<p>Extends the base Langfuse <code>start_span</code> to add BrowserStack-specific
+<code>expected_output</code> and <code>context</code> attributes, which are stored both
+on the object and as OpenTelemetry span attributes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Human-readable name for this span.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>expected_output</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Ground-truth value for evaluation.  Stored on
+the span and written as an OTEL attribute.  Defaults to
+<code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>context</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional context payload attached to the span.  Stored
+and written as an OTEL attribute.  Defaults to <code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>parent_span</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Parent span to nest this span under.  When
+<code>None</code> the span is attached to the root trace.  Defaults to
+<code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>**kwargs</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Extra keyword arguments forwarded to
+:meth:<code>Langfuse.start_span</code> (e.g. <code>input</code>, <code>output</code>,
+<code>metadata</code>).</p>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Span observation object with convenience methods <code>start_generation()</code>, <code>create_event()</code>, and <code>start_span()</code> for building nested observations.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">sdk = AISDK(public_key=&quot;pk&quot;, secret_key=&quot;sk&quot;)
+span = sdk.start_span(
+    &quot;keyword-extraction&quot;,
+    input={&quot;text&quot;: &quot;Climate change article...&quot;},
+    expected_output=[&quot;climate&quot;, &quot;emissions&quot;],
+)
+span.end(output=[&quot;climate&quot;, &quot;environment&quot;])
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.client.AISDK.start_generation" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">start_generation</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">prompt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">expected_output</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent_span</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#browserstack_ai_sdk.client.AISDK.start_generation" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create a generation observation for an LLM call.</p>
+<p>Convenience wrapper around :meth:<code>start_observation</code> that maps
+the familiar <code>prompt</code>/<code>response</code>/<code>model</code> parameters to the
+Langfuse <code>input</code>/<code>output</code>/<code>model</code> keys.  Also stores
+BrowserStack-specific <code>expected_output</code> and <code>context</code>
+attributes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Human-readable name for this generation step.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>model</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>LLM model name (e.g. <code>'gpt-4o'</code>).  Defaults to
+<code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>prompt</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Input prompt text or dict.  Mapped to <code>input</code>.
+Defaults to <code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>response</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Generated response text.  Mapped to <code>output</code>.
+Defaults to <code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>expected_output</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Ground-truth value for evaluation scoring.
+Defaults to <code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>context</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional context payload attached to the generation.
+Defaults to <code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>parent_span</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Parent span to nest this generation under.
+Defaults to <code>None</code> (attaches to root trace).</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>**kwargs</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Extra keyword arguments forwarded to
+:meth:<code>start_observation</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Generation observation object with convenience methods attached.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">sdk = AISDK(public_key=&quot;pk&quot;, secret_key=&quot;sk&quot;)
+gen = sdk.start_generation(
+    &quot;chat-response&quot;,
+    model=&quot;gpt-4o&quot;,
+    prompt=&quot;What is the capital of France?&quot;,
+    response=&quot;Paris&quot;,
+    expected_output=&quot;Paris is the capital of France&quot;,
+)
+gen.end()
+sdk.flush()
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.client.AISDK.start_event" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">start_event</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">expected_output</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent_span</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#browserstack_ai_sdk.client.AISDK.start_event" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create an event observation (a point-in-time span with no duration).</p>
+<p>Events are lightweight observations used to mark discrete moments
+within a trace — for example a cache miss, a tool call, or a
+retrieval step that doesn't span time.  Like spans they support
+<code>expected_output</code> and <code>context</code> for evaluation.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Human-readable name for this event.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>expected_output</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Ground-truth value for evaluation scoring.
+Defaults to <code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>context</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional context payload attached to the event.
+Defaults to <code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>parent_span</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Parent span to nest this event under.  Defaults
+to <code>None</code> (attaches to root trace).</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>**kwargs</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Extra keyword arguments forwarded to
+:meth:<code>start_observation</code> (e.g. <code>input</code>, <code>metadata</code>).</p>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Event observation object with convenience methods attached.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">sdk = AISDK(public_key=&quot;pk&quot;, secret_key=&quot;sk&quot;)
+span = sdk.start_span(&quot;my-step&quot;)
+event = sdk.start_event(
+    &quot;cache-miss&quot;,
+    parent_span=span,
+    input={&quot;key&quot;: &quot;prompt-v3&quot;},
+)
+event.end()
+span.end()
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="flush">flush()<a class="headerlink" href="#flush" title="Permanent link">&para;</a></h3>
+<p>Call <code>sdk.flush()</code> before your process exits to ensure all buffered spans are
+uploaded. Inherited from Langfuse — not specific to any one observation type.</p>
+<pre><code class="language-python">sdk = AISDK(public_key=&quot;pk&quot;, secret_key=&quot;sk&quot;)
+span = sdk.start_span(&quot;my-step&quot;, input=&quot;hello&quot;)
+span.end(output=&quot;world&quot;)
+sdk.flush()  # upload everything before exit
+</code></pre>
+<hr />
+<h2 id="tracewrapper">TraceWrapper<a class="headerlink" href="#tracewrapper" title="Permanent link">&para;</a></h2>
+<p>Returned by <code>sdk.trace()</code>. Call <code>.span()</code> to create named child spans. The first call creates the root span; subsequent calls create nested children.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+    <div class="doc doc-contents first">
+
+
+        <p>Wrapper for creating a trace with named child spans.</p>
+<p>Returned by <code>sdk.trace()</code>. Call <code>.span()</code> to create named child spans
+nested under a root trace. First <code>.span()</code> call creates the root; subsequent
+calls create children.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><a class="autorefs autorefs-internal" title="trace_id
+
+  
+      property
+   (browserstack_ai_sdk.trace_wrapper.TraceWrapper.trace_id)" href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper.trace_id">trace_id</a></code></td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The 32-character hex trace ID. <code>None</code> until
+first <code>.span()</code> call.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><a class="autorefs autorefs-internal" title="id
+
+  
+      property
+   (browserstack_ai_sdk.trace_wrapper.TraceWrapper.id)" href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper.id">id</a></code></td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The root span ID. <code>None</code> until first <code>.span()</code> call.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from browserstack_ai_sdk import AISDK
+
+sdk = AISDK(public_key=&quot;pk&quot;, secret_key=&quot;sk&quot;)
+t = sdk.trace(&quot;rag-pipeline&quot;, user_id=&quot;user-1&quot;)
+
+retrieval = t.span(&quot;retrieval&quot;, input=&quot;user query&quot;)
+retrieval.end(output=&quot;doc chunk&quot;)
+
+generation = t.span(&quot;generation&quot;, input=&quot;doc + query&quot;)
+generation.end(output=&quot;answer&quot;)
+
+sdk.flush()
+</code></pre>
+</details>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+<h2 id="browserstack_ai_sdk.trace_wrapper.TraceWrapper-attributes">Attributes<a href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper-attributes" class="headerlink" title="Permanent link">&para;</a></h2>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="browserstack_ai_sdk.trace_wrapper.TraceWrapper.trace_id" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">trace_id</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper.trace_id" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>The trace ID of the root span as a hex string, or <code>None</code> if no span has been created yet.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="browserstack_ai_sdk.trace_wrapper.TraceWrapper.id" class="doc doc-heading">
+            <code class="highlight language-python"><span class="nb">id</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.trace_wrapper.TraceWrapper.id" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>The ID of the root span, or <code>None</code> if no span has been created yet.</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div><hr />
+<h2 id="auto-tracing">Auto Tracing<a class="headerlink" href="#auto-tracing" title="Permanent link">&para;</a></h2>
+<p>Zero-code instrumentation. Call <code>Observe.init()</code> once at startup, then every LLM call is captured automatically.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<h2 id="browserstack_ai_sdk.Observe-functions">Functions<a href="#browserstack_ai_sdk.Observe-functions" class="headerlink" title="Permanent link">&para;</a></h2>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.Observe.init" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">init</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.Observe.init" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Initialise the BrowserStack AI SDK auto-tracing system.</p>
+<p>Must be called once before any LLM calls are made.  Configures
+the OpenTelemetry tracer provider, attaches the
+:class:<code>TestOpsSpanProcessor</code> to export spans, and optionally
+auto-instruments supported LLM libraries (OpenAI, Anthropic,
+Google Vertex AI) and HTTP frameworks (Flask, FastAPI, Django).</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>public_key</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>BrowserStack public API key.  Can also be set
+via the <code>AISDK_PUBLIC_KEY</code> environment variable.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>secret_key</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>BrowserStack secret API key.  Can also be set
+via the <code>AISDK_SECRET_KEY</code> environment variable.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>service_name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the instrumented service.
+Defaults to <code>'testops-service'</code>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>tracing_enabled</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Enable OpenTelemetry tracing.
+Defaults to <code>True</code> when <code>Observe.init</code> is called.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>debug</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Enable verbose debug logging.
+Defaults to <code>False</code>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The active :class:<code>TestOpsTracing</code> singleton instance, or</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>None</code> if initialisation fails.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from browserstack_ai_sdk import Observe
+
+Observe.init(
+    public_key=&quot;your-public-key&quot;,
+    secret_key=&quot;your-secret-key&quot;,
+)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.Observe.with_trace" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">with_trace</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">carrier</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.Observe.with_trace" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Execute a function within a named trace context scope.</p>
+<p>Creates an OpenTelemetry span that acts as the root context for all
+LLM calls made inside <code>fn</code>.  The span is automatically ended when
+<code>fn</code> returns or raises.  Both synchronous and <code>async</code> functions
+are supported.</p>
+<p>For distributed tracing, pass <code>carrier</code> from an upstream service
+to automatically link this trace to the upstream trace —
+:meth:<code>inject_remote_carrier</code> is called internally.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>name</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name for the trace span (e.g. the function or operation
+name shown in the BrowserStack dashboard).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>fn</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Callable to execute within the trace context.  Supports
+both sync and async functions.  Defaults to <code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>carrier</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional trace context from an upstream service.  See
+:meth:<code>inject_remote_carrier</code> for accepted formats.
+Defaults to <code>None</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The return value of <code>fn()</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from browserstack_ai_sdk import Observe
+
+# Upstream service — start a new trace
+def run_pipeline():
+    Observe.set_attribute(Observe.TraceAttribute.SESSION_ID, &quot;sess-1&quot;)
+    result = openai_client.chat.completions.create(
+        model=&quot;gpt-4o&quot;,
+        messages=[{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Hello&quot;}],
+    )
+    return result
+
+Observe.with_trace(&quot;run_pipeline&quot;, run_pipeline)
+
+# Downstream service — link to upstream trace
+def downstream():
+    result = openai_client.chat.completions.create(...)
+    return result
+
+carrier = {&quot;traceparent&quot;: &quot;00-abc...&quot;, &quot;baggage&quot;: &quot;...&quot;}
+Observe.with_trace(&quot;downstream&quot;, downstream, carrier=carrier)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.Observe.set_attribute" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">set_attribute</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.Observe.set_attribute" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Set an attribute on the current active span.</p>
+<p>Sets the value both as an OpenTelemetry span attribute and in the
+baggage context so it propagates to all child spans.  Use
+:class:<code>TraceAttribute</code> enum values for standard fields
+(<code>SESSION_ID</code>, <code>USER_ID</code>, <code>INPUT</code>, <code>OUTPUT</code>) or plain
+strings for arbitrary metadata.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>key</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A :class:<code>TraceAttribute</code> enum member, or a plain string
+for metadata.  String keys are stored under
+<code>AIOPS_INTERNAL.metadata.&lt;key&gt;</code>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>value</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The value to set.  Dicts and lists are JSON-serialised.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from browserstack_ai_sdk import Observe
+
+# Set standard fields using the enum
+Observe.set_attribute(Observe.TraceAttribute.SESSION_ID, &quot;sess-abc&quot;)
+Observe.set_attribute(Observe.TraceAttribute.USER_ID, &quot;user-456&quot;)
+
+# Set arbitrary metadata using a string key
+Observe.set_attribute(&quot;environment&quot;, &quot;production&quot;)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.Observe.get_trace_id" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_trace_id</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.Observe.get_trace_id" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Return the current active trace ID as a hex string.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The 32-character hex trace ID if a span is currently active,</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>or <code>None</code> if no trace is in progress.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from browserstack_ai_sdk import Observe
+
+def my_handler():
+    trace_id = Observe.get_trace_id()
+    print(trace_id)  # &quot;4bf92f3577b34da6a3ce929d0e0e4736&quot;
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.Observe.get_carrier" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_carrier</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.Observe.get_carrier" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Serialise the current trace context for propagation to downstream services.</p>
+<p>Returns a dict containing <code>traceparent</code> and any baggage entries
+that can be forwarded to a downstream service as HTTP headers or a
+message queue payload.  Pass the returned dict to
+:meth:<code>inject_remote_carrier</code> on the receiving side.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>dict</code> with <code>traceparent</code> (str) and any active baggage</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>key–value pairs.  Returns an empty dict if no trace is active.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from browserstack_ai_sdk import Observe
+
+def upstream_handler():
+    Observe.set_attribute(Observe.TraceAttribute.SESSION_ID, &quot;sess-1&quot;)
+    carrier = Observe.get_carrier()
+    # Forward carrier to downstream service
+    requests.post(&quot;http://service-b/api&quot;, json={&quot;carrier&quot;: carrier})
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="browserstack_ai_sdk.Observe.inject_remote_carrier" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">inject_remote_carrier</span><span class="p">(</span><span class="n">carrier_input</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.Observe.inject_remote_carrier" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Link this trace to an upstream service's trace context.</p>
+<p>Call this from a downstream service (Host 2) to attach incoming
+spans to the upstream service's trace ID.  Accepts carrier data in
+the W3C <code>traceparent</code>/<code>baggage</code> format.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>carrier_input</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The trace context from the upstream service.
+Accepts:</p>
+<ul>
+<li><code>dict</code> — e.g. ``{"traceparent": "...", "baggage": "..."}</li>
+<li>JSON <code>str</code> — same structure as dict</li>
+<li>Plain W3C baggage string</li>
+</ul>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from browserstack_ai_sdk import Observe
+
+# Downstream service — link to upstream trace
+carrier = {&quot;traceparent&quot;: &quot;00-abc...&quot;, &quot;baggage&quot;: &quot;session.id=123&quot;}
+Observe.inject_remote_carrier(carrier)
+
+# LLM calls made after this are linked to the upstream trace
+result = openai_client.chat.completions.create(...)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><hr />
+<h2 id="media-attachments">Media Attachments<a class="headerlink" href="#media-attachments" title="Permanent link">&para;</a></h2>
+<p><code>Media</code> is exported directly from <code>browserstack_ai_sdk</code>. Attach it as a value
+in any <code>input</code>, <code>output</code>, or <code>metadata</code> dict when creating spans or
+generations — the SDK uploads the binary data automatically before each trace
+flush and stores a compact reference string in the trace payload.</p>
+<pre><code class="language-python">from browserstack_ai_sdk import AISDK, Media
+
+sdk = AISDK(public_key=&quot;your-public-key&quot;, secret_key=&quot;your-secret-key&quot;)
+
+span = sdk.start_span(
+    &quot;screenshot-analysis&quot;,
+    input={
+        &quot;image&quot;: Media(file_path=&quot;/tmp/screen.png&quot;),
+        &quot;question&quot;: &quot;Are there any UI errors visible?&quot;,
+    },
+)
+span.end(output={&quot;analysis&quot;: &quot;No visible errors found.&quot;})
+sdk.flush()
+</code></pre>
+<h3 id="creating-a-media-object">Creating a <code>Media</code> Object<a class="headerlink" href="#creating-a-media-object" title="Permanent link">&para;</a></h3>
+<p>Provide exactly one of the four creation paths:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_path</code></td>
+<td><code>str</code></td>
+<td>Path to a local file. MIME type is inferred from the extension. Any file type accepted (image, audio, video, PDF, …).</td>
+</tr>
+<tr>
+<td><code>content_bytes</code></td>
+<td><code>bytes</code></td>
+<td>Raw in-memory binary data. Must also supply <code>content_type</code>.</td>
+</tr>
+<tr>
+<td><code>base64_data_uri</code></td>
+<td><code>str</code></td>
+<td>A complete base64 data URI: <code>data:&lt;mime&gt;;base64,&lt;data&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>content_type</code></td>
+<td><code>str</code></td>
+<td>MIME type string, e.g. <code>"image/png"</code>. Required with <code>content_bytes</code>; optional otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="from-a-local-file">From a local file<a class="headerlink" href="#from-a-local-file" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">from browserstack_ai_sdk import Media
+
+media = Media(file_path=&quot;/screenshots/home.png&quot;)        # image
+media = Media(file_path=&quot;/recordings/user-session.mp3&quot;) # audio
+media = Media(file_path=&quot;/captures/flow.mp4&quot;)           # video
+</code></pre>
+<h4 id="from-raw-bytes-must-supply-content_type">From raw bytes (must supply <code>content_type</code>)<a class="headerlink" href="#from-raw-bytes-must-supply-content_type" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">from browserstack_ai_sdk import Media
+
+with open(&quot;chart.jpg&quot;, &quot;rb&quot;) as f:
+    raw = f.read()
+
+media = Media(content_bytes=raw, content_type=&quot;image/jpeg&quot;)
+</code></pre>
+<h4 id="from-a-base64-data-uri">From a base64 data URI<a class="headerlink" href="#from-a-base64-data-uri" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">import base64
+from browserstack_ai_sdk import Media
+
+with open(&quot;screenshot.png&quot;, &quot;rb&quot;) as f:
+    b64 = base64.b64encode(f.read()).decode()
+
+media = Media(base64_data_uri=f&quot;data:image/png;base64,{b64}&quot;)
+</code></pre>
+<h3 id="attaching-media-to-traces">Attaching Media to Traces<a class="headerlink" href="#attaching-media-to-traces" title="Permanent link">&para;</a></h3>
+<h4 id="manual-tracing-aisdk">Manual tracing (<code>AISDK</code>)<a class="headerlink" href="#manual-tracing-aisdk" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">from browserstack_ai_sdk import AISDK, Media
+import base64
+
+sdk = AISDK(public_key=&quot;your-public-key&quot;, secret_key=&quot;your-secret-key&quot;)
+
+# Vision model — attach image
+gen = sdk.start_generation(
+    &quot;vision-analysis&quot;,
+    model=&quot;gpt-4o&quot;,
+    input={&quot;image&quot;: Media(file_path=&quot;/tmp/chart.png&quot;), &quot;prompt&quot;: &quot;Summarise this chart.&quot;},
+)
+gen.end(output={&quot;summary&quot;: &quot;The chart shows a 15% growth trend.&quot;})
+
+# Audio transcription — from file
+span = sdk.start_span(&quot;transcription&quot;, input={&quot;audio&quot;: Media(file_path=&quot;/tmp/call.mp3&quot;)})
+span.end(output={&quot;transcript&quot;: &quot;Hello, I need help with my order...&quot;})
+
+# From raw bytes
+with open(&quot;recording.mp3&quot;, &quot;rb&quot;) as f:
+    raw = f.read()
+span2 = sdk.start_span(&quot;audio&quot;, input={&quot;audio&quot;: Media(content_bytes=raw, content_type=&quot;audio/mpeg&quot;)})
+span2.end(output={&quot;transcript&quot;: &quot;Thank you for calling support.&quot;})
+
+# From a base64 data URI
+b64 = base64.b64encode(open(&quot;chart.png&quot;, &quot;rb&quot;).read()).decode()
+span3 = sdk.start_span(&quot;chart&quot;, input={&quot;chart&quot;: Media(base64_data_uri=f&quot;data:image/png;base64,{b64}&quot;)})
+span3.end()
+
+sdk.flush()
+</code></pre>
+<h4 id="auto-tracing-observe">Auto tracing (<code>Observe</code>)<a class="headerlink" href="#auto-tracing-observe" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">from browserstack_ai_sdk import Observe, Media
+
+Observe.init(public_key=&quot;your-public-key&quot;, secret_key=&quot;your-secret-key&quot;)
+Observe.set_attribute(&quot;screenshot&quot;, Media(file_path=&quot;/tmp/screen.png&quot;))
+
+response = openai_client.chat.completions.create(
+    model=&quot;gpt-4o&quot;,
+    messages=[{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Describe this screenshot.&quot;}],
+)
+</code></pre>
+<h3 id="supported-content-types">Supported Content Types<a class="headerlink" href="#supported-content-types" title="Permanent link">&para;</a></h3>
+<p>Any MIME type is accepted. Common examples:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>MIME types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Images</td>
+<td><code>image/png</code>, <code>image/jpeg</code>, <code>image/webp</code>, <code>image/gif</code>, <code>image/svg+xml</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td><code>audio/mpeg</code> (mp3), <code>audio/wav</code>, <code>audio/ogg</code>, <code>audio/webm</code></td>
+</tr>
+<tr>
+<td>Video</td>
+<td><code>video/mp4</code>, <code>video/webm</code>, <code>video/ogg</code></td>
+</tr>
+<tr>
+<td>Documents</td>
+<td><code>application/pdf</code>, <code>text/plain</code>, <code>text/html</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="traceattribute">TraceAttribute<a class="headerlink" href="#traceattribute" title="Permanent link">&para;</a></h2>
+<p>Use these enum values with <code>Observe.set_attribute()</code> to attach standard metadata.</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+
+    <div class="doc doc-contents first">
+
+
+        <p>Standard span attributes for BrowserStack AI SDK traces.</p>
+<p>Pass members of this enum to :meth:<code>Observe.set_attribute</code> (or
+:meth:<code>AISDK.trace</code>) to attach well-known metadata to the current span.
+Using the enum ensures consistent attribute names across your
+instrumented services.</p>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from browserstack_ai_sdk import Observe
+
+Observe.set_attribute(Observe.TraceAttribute.SESSION_ID, &quot;sess-abc123&quot;)
+Observe.set_attribute(Observe.TraceAttribute.USER_ID, &quot;user-456&quot;)
+Observe.set_attribute(Observe.TraceAttribute.INPUT, &quot;user query text&quot;)
+Observe.set_attribute(Observe.TraceAttribute.OUTPUT, &quot;model response&quot;)
+</code></pre>
+</details>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+<h2 id="browserstack_ai_sdk.attributes.TraceAttribute-attributes">Attributes<a href="#browserstack_ai_sdk.attributes.TraceAttribute-attributes" class="headerlink" title="Permanent link">&para;</a></h2>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="browserstack_ai_sdk.attributes.TraceAttribute.SESSION_ID" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">SESSION_ID</span> <span class="o">=</span> <span class="s1">&#39;session.id&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.attributes.TraceAttribute.SESSION_ID" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Session identifier – groups traces from a single user session.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="browserstack_ai_sdk.attributes.TraceAttribute.USER_ID" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">USER_ID</span> <span class="o">=</span> <span class="s1">&#39;user.id&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.attributes.TraceAttribute.USER_ID" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>User identifier – links traces to a specific end-user.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="browserstack_ai_sdk.attributes.TraceAttribute.INPUT" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">INPUT</span> <span class="o">=</span> <span class="s1">&#39;AIOPS_INTERNAL.trace.input&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.attributes.TraceAttribute.INPUT" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>The user-facing input text sent to the LLM pipeline.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="browserstack_ai_sdk.attributes.TraceAttribute.OUTPUT" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">OUTPUT</span> <span class="o">=</span> <span class="s1">&#39;AIOPS_INTERNAL.trace.output&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+<a href="#browserstack_ai_sdk.attributes.TraceAttribute.OUTPUT" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>The final output text returned by the LLM pipeline.</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 BrowserStack
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
